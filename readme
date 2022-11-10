@@ -1,0 +1,5 @@
+Calculates beautiful numbers.
+Order of the digits is taken into account at the number in the number:
+0210030 - first beautiful number 0+2+1 = 0+3+0
+0210003 - second beautiful number 0+2+1 = 0+0+3
+1200003 - third beautiful number 1+2+0 = 0+0+3
