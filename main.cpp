@@ -3,11 +3,11 @@
 #include "CombinationNumber.h"
 
 int main(int argc, char* argv[]) {
-    const unsigned parts_num = 4;
-    const unsigned number_sys = 6;
-    unsigned algo_res_1;
-    unsigned algo_res_2;
-    unsigned algo_res_3;
+    const unsigned parts_num = 13; // digits in the number
+    const unsigned number_sys = 13; // numeration system
+    unsigned long long algo_res_1;
+    unsigned long long algo_res_2;
+    unsigned long long algo_res_3;
 
     CombinationNumber beaty_number;
     CombinationNumber_1 beaty_number_1;
