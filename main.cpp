@@ -2,7 +2,7 @@
 
 #include "CombinationNumber.h"
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) try {
     const unsigned parts_num = 13; // digits in the number
     const unsigned number_sys = 13; // numeration system
     unsigned long long algo_res_1;
@@ -18,22 +18,13 @@ int main(int argc, char* argv[]) {
     algo_res_3 = beaty_number_2.CountBeautyNumbers(parts_num, number_sys);
 
     std::cout << "Algo 1: " << algo_res_1 << '\n';
-
-    try {
-        std::cout << "Algo 2: " << algo_res_2 << '\n';
-    }
-    catch (std::runtime_error& except) {
-        std::cout << except.what() << "\n";
-    }
-
+    std::cout << "Algo 2: " << algo_res_2 << '\n';
     std::cout << "Algo 3: " << algo_res_3 << '\n';
 
     if (algo_res_1 == algo_res_2 && algo_res_1 == algo_res_3)
-        std::cout << "results equal \n";
+        std::cout << "results equal \n\n";
     else
-        std::cout << "results not equal \n";
-
-    std::cout << '\n';
+        std::cout << "results not equal \n\n";
 
     std::cout << beaty_number.CountCombinations(2, 8, 3) << '\n';   // 36
     std::cout << beaty_number.CountCombinations(3, 8, 4) << '\n';   // 120
@@ -48,4 +39,7 @@ int main(int argc, char* argv[]) {
     std::cout << beaty_number.CountCombinations(12, 8, 13) << '\n'; // 50388
 
     return 0;
+}
+catch (std::runtime_error& error) {
+    std::cout << "Exception: " << error.what() << '\n';
 }
