@@ -25,7 +25,7 @@ unsigned long long CombinationNumber::CountBeautyNumbers(const unsigned parts_nu
     const unsigned max_num = number_sys - 1;
     const unsigned max_sum = max_num * half_num;
 
-    if (parts_num < 2)
+    if (parts_num < 2 || !number_sys)
         throw std::runtime_error("Wrong data");
 
     for (unsigned i = 0; i <= max_sum; ++i) {
@@ -66,7 +66,7 @@ unsigned long long CombinationNumber::BinomialCoefficient(const unsigned n, cons
 unsigned long long CombinationNumber_1::CountBeautyNumbers(unsigned parts_num, unsigned number_sys) {
     bool is_multiple = true;
 
-    if (parts_num < 2)
+    if (parts_num < 2 || !number_sys)
         throw std::runtime_error("Wrong data");
 
     if (parts_num % 2) {
@@ -109,7 +109,7 @@ unsigned long long CombinationNumber_2::CountBeautyNumbers(unsigned parts_num, u
     const size_t data_size = max_sum + 1;
     std::vector<unsigned long long> data(data_size);
 
-    if (parts_num < 2)
+    if (parts_num < 2 || !number_sys)
         throw std::runtime_error("Wrong data");
 
     auto calc_data = [&data, &number_sys](unsigned parts_num, unsigned index, auto&& lambda) {
